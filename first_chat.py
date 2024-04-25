@@ -4,7 +4,7 @@ import pandas as pd
 
 #------------------------------------------
 # Testing database
-file_path = "database\raw_students\Ana.txt"
+file_path = "database\\raw_students\\Ana.txt"
 with open(file_path, "r") as file:
     data = file.read()
 st.write(data)
@@ -29,6 +29,10 @@ if prompt := st.chat_input("What is up?"):
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
+
+    #--- write prompt in prompt history
+    with open("database\\prompt_history.txt", "a") as file:
+        file.write(prompt + "\n")
 
     response = f"Echo: {prompt}"
     # Display assistant response in chat message container
