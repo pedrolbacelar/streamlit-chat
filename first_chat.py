@@ -34,6 +34,11 @@ if prompt := st.chat_input("What is up?"):
     with open("database/prompt_history.txt", "a") as file:
         file.write(prompt + "\n")
 
+    #--- Read history of prompts
+    with open("database/prompt_history.txt", "r") as file:
+        data = file.read()
+    st.write(data)
+
     response = f"Echo: {prompt}"
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
