@@ -31,7 +31,7 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
     #--- write prompt in prompt history
-    with open("database\\prompt_history.txt", "a") as file:
+    with open("database/prompt_history.txt", "a") as file:
         file.write(prompt + "\n")
 
     response = f"Echo: {prompt}"
