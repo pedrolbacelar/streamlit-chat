@@ -4,7 +4,7 @@ import pandas as pd
 
 #------------------------------------------
 # Testing database
-file_path = "database\\raw_students\\Ana.txt"
+file_path = "database/raw_students/Ana.txt"
 with open(file_path, "r") as file:
     data = file.read()
 st.write(data)
