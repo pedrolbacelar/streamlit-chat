@@ -3,11 +3,9 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
 #------------------------------------------
-# Testing database
-file_path = "database/raw_students/Ana.txt"
-with open(file_path, "r") as file:
-    data = file.read()
-st.write(data)
+st.write("Hello World")
+test_secret = st.secrets["db_username"]
+st.write(test_secret)
 
 
 
